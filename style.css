@@ -1,0 +1,635 @@
+
+:root {
+    --primary-color: #7A0000;    /* Merah Marun Tradisi */
+    --primary-hover: #5A0000;
+    --accent-color: #D4AF37;     /* Kuning Emas */
+    --bg-light: #FDFBF7;         /* Krem Lembut */
+    --bg-white: #FFFFFF;
+    --text-color: #222222;
+    --text-muted: #666666;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-hover: 0 8px 24px rgba(0,0,0,0.15);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1.1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('together.jpeg') no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 1.5rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.badge {
+    background-color: var(--accent-color);
+    color: #111;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #E0E0E0;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Tombol */
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: #111;
+}
+
+.btn-primary:hover {
+    background-color: #B89528;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   STATISTIK SECTION
+   ========================================== */
+.stats-section {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 2.5rem 5%;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    color: #DDDDDD;
+}
+
+/* ==========================================
+   SECTION COMMON STYLES
+   ========================================== */
+.about-section, .katalog-section, .services-section, .faq-section, .contact-section {
+    padding: 4.5rem 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   TENTANG KAMI
+   ========================================== */
+.about-container {
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 6px solid var(--accent-color);
+}
+
+.about-text h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text .lead {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.about-list li {
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   VIDEO HIGHLIGHT SECTION
+   ========================================== */
+.video-section {
+    padding: 4.5rem 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.video-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+    border: 3px solid var(--accent-color);
+}
+
+.video-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #EEEEEE;
+    outline: none;
+}
+
+.video-caption {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--bg-white);
+}
+
+.video-caption h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.video-caption p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   KATALOG PRODUK (CSS GRID - 4 KOLOM)
+   ========================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+.product-card {
+    background-color: var(--bg-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: #FFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.btn-sm {
+    background-color: var(--accent-color);
+    color: #111;
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-sm:hover {
+    background-color: #B89528;
+}
+
+/* ==========================================
+   LAYANAN JASA (CSS GRID - 3 KOLOM)
+   ========================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service-box {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.service-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.service-box p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   PERTANYAAN UMUM (FAQ)
+   ========================================== */
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.faq-item {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+}
+
+.faq-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+}
+
+/* ==========================================
+   KONTAK DAN FORMULIR
+   ========================================== */
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.contact-form input:focus, 
+.contact-form select:focus, 
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 5% 2rem 5%;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-col h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+    color: #DDD;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: var(--primary-hover);
+    font-size: 0.85rem;
+    color: #BBB;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ==========================================
+   MEDIA QUERY (RESPONSIVE DESIGN)
+   ========================================== */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .video-badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+        top: 10px;
+        left: 10px;
+    }
+    
+    .video-caption {
+        padding: 1rem;
+    }
+
+    .video-caption h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        padding: 1.5rem;
+    }
+}
